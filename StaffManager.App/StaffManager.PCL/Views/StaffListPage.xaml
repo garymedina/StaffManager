@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaffManager.PCL.Views.StaffListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <ActivityIndicator x:Name="ProgressRing" IsVisible="False"/>
+                <ListView x:Name="StaffListView" HasUnevenRows="False" RowHeight="80">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Column="0"  HeightRequest="120" WidthRequest="120" Aspect="AspectFit"/>
+                                    <Label Text="Full Name:" Grid.Row="0" Grid.Column="1"/>
+                                    <Label Text="{Binding FullName}" Grid.Row="0" Grid.Column="2"/>
+                                    <Label Text="Address:" Grid.Row="1" Grid.Column="1"/>
+                                    <Label Text="{Binding Adress}" Grid.Row="1" Grid.Column="2"/>
+                                    <Label Text="Phone:" Grid.Row="2" Grid.Column="1"/>
+                                    <Label Text="{Binding Phone}" Grid.Row="2" Grid.Column="2"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Create New Staff" x:Name="ButtonCreateNew" Clicked="ButtonCreateNew_OnClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

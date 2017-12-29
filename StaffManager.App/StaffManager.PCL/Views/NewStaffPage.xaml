@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaffManager.PCL.Views.NewStaffPage">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Label Text="Full Name"/>
+            <Entry x:Name="EntryFullName"/>
+
+            <Label Text="Address"/>
+            <Entry x:Name="EntryAddress"/>
+
+            <Label Text="Phone"/>
+            <Entry Keyboard="Numeric" x:Name="EntryPhone"/>
+
+            <Button Text="Take Picture" x:Name="ButtonTakePicture" Clicked="ButtonTakePicture_OnClicked"/>
+            <Grid>
+                <Image x:Name="ImageAvatar"  Source="icon.png" HeightRequest="100" WidthRequest="100"/>
+                <ActivityIndicator x:Name="MyProRing" IsRunning="True"/>
+            </Grid>
+            <Button Text="Save" x:Name="ButtonSave" Clicked="ButtonSave_OnClicked"/>
+            <Label x:Name="messageLabel"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

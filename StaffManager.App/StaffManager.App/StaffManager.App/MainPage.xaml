@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StaffManager.App"
+             x:Class="StaffManager.App.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <Button Text="Staf List" x:Name="ButtonStafList"/>
+                    <Button Text="Company"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="End">
+                    <Button Text="Setting"/>
+                    <Button Text="About App"/>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
